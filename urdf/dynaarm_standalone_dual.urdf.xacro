@@ -33,7 +33,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” 
   <link name="world" />
 
   <!-- create two dynaarms and fix their bases, move them up such that they do not intersect with the ground -->
-  <xacro:dynaarm tf_prefix="left$(arg tf_prefix)/"
+  <xacro:dynaarm tf_prefix="left$(arg tf_prefix)"
                 parent_link="world"
                 dof="$(arg dof)"
                 mode="$(arg mode)"
@@ -44,7 +44,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” 
   </xacro:dynaarm>
 
   <!-- Note: for a real world application you would pass different parameters for both arms (e.g. different ethercat_bus)-->
-  <xacro:dynaarm tf_prefix="right$(arg tf_prefix)/"
+  <xacro:dynaarm tf_prefix="right$(arg tf_prefix)"
                 parent_link="world"
                 dof="$(arg dof)"
                 mode="$(arg mode)"

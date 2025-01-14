@@ -66,15 +66,15 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” 
       </xacro:if>
 
       <xacro:if value="${dof >= 2}">
-        <xacro:dynaarm_ros2control_joint name="${tf_prefix}shoulder_flexion" address="2" />
+        <xacro:dynaarm_ros2control_joint name="${tf_prefix}shoulder_flexion" address="3" />
       </xacro:if>
 
       <xacro:if value="${dof >= 3}">
-        <xacro:dynaarm_ros2control_joint name="${tf_prefix}elbow_flexion" address="3" />
+        <xacro:dynaarm_ros2control_joint name="${tf_prefix}elbow_flexion" address="2" />
       </xacro:if>
 
       <xacro:if value="${dof >= 4}">
-        <xacro:dynaarm_ros2control_joint name="${tf_prefix}forearm_rotation" address="4" />
+        <xacro:dynaarm_ros2control_joint name="${tf_prefix}forearm_rotation" address="6" />
       </xacro:if>
 
       <xacro:if value="${dof >= 5}">
@@ -82,7 +82,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” 
       </xacro:if>
 
       <xacro:if value="${dof >= 6}">
-        <xacro:dynaarm_ros2control_joint name="${tf_prefix}wrist_rotation" address="6" />
+        <xacro:dynaarm_ros2control_joint name="${tf_prefix}wrist_rotation" address="4" />
       </xacro:if>
       <gpio name="${tf_prefix}DynaarmSystem">
        <command_interface name="freeze_mode" />
